@@ -55,15 +55,15 @@ namespace MedicinesServer.Controllers
         }
 
         // PUT: api/Medicines/5
-        public void Put(int id, [FromBody]MedicinesModel value)
+        public void Put(int id, [FromBody]MedicinesModel updatedData)
         {
             var data = medicines.FirstOrDefault(x => x.Id == id);
-            data.Name = value.Name;
-            data.Brand = value.Brand;
-            data.Notes = value.Notes;
-            data.Price = value.Price;
-            data.Quantity = value.Quantity;
-            data.ExpiryDate = value.ExpiryDate;
+            data.Name = updatedData.Name;
+            data.Brand = updatedData.Brand;
+            data.Notes = updatedData.Notes;
+            data.Price = updatedData.Price;
+            data.Quantity = updatedData.Quantity;
+            data.ExpiryDate = updatedData.ExpiryDate;
 
         }
 
